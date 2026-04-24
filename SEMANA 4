@@ -1,0 +1,48 @@
+SEMANA 4: OPERADORES LÓGICOS EN SQL
+Conocimientos previos
+¿Cómo verificar si un campo tiene un valor nulo?
+Se utiliza la condición IS NULL para identificar campos sin valor.
+También se puede usar ISNULL() para reemplazar valores nulos por otro valor del mismo tipo.
+¿Para qué sirve el operador BETWEEN?
+Permite filtrar datos dentro de un rango específico de valores (por ejemplo, números, fechas o precios).
+Incluye tanto el valor inicial como el final del rango.
+¿Qué hace la cláusula GROUP BY?
+Agrupa filas que tienen valores en común en una o varias columnas.
+Se utiliza para analizar datos en conjunto, en lugar de fila por fila.
+Utilidad de operadores y cláusulas
+Operador LIKE
+Se utiliza para buscar patrones dentro de texto.
+Permite encontrar valores que comienzan, contienen o terminan con ciertos caracteres.
+
+Ejemplo conceptual:
+Buscar nombres que comiencen con una letra específica.
+
+Cláusula HAVING
+Se usa para filtrar resultados después de aplicar una agrupación con GROUP BY.
+A diferencia de WHERE, trabaja con grupos y no con filas individuales.
+Función COUNT()
+Cuenta el número de registros dentro de un grupo.
+Solo considera valores que no sean nulos.
+Importancia de los operadores lógicos
+
+Los operadores lógicos permiten construir consultas más precisas y complejas, 
+combinando múltiples condiciones.
+
+Principales operadores:
+
+AND: Todas las condiciones deben cumplirse.
+OR: Se cumple al menos una condición.
+NOT: Niega una condición.
+Aplicación práctica
+Filtrar datos específicos (ejemplo: estudiantes con nota mayor a cierto valor).
+Buscar información por patrones (nombres, códigos, etc.).
+Agrupar datos para obtener estadísticas (promedios, conteos).
+Aplicar condiciones a grupos de datos.
+Diferencia clave
+WHERE: Filtra filas individuales antes de agrupar.
+HAVING: Filtra grupos después de aplicar GROUP BY.
+Conclusión
+
+El uso de operadores lógicos y cláusulas como LIKE, BETWEEN, GROUP BY y HAVING permite realizar 
+consultas más avanzadas y precisas. Estas herramientas son fundamentales para analizar datos, 
+obtener información relevante y apoyar la toma de decisiones.
