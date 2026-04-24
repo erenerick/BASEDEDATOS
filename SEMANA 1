@@ -1,0 +1,67 @@
+# BASEDEDATOS
+SEMANA 1: INTRODUCCIÓN A BASE DE DATOS
+Utilidad
+
+Una base de datos permite almacenar grandes cantidades de información de forma organizada, 
+facilitando su acceso, consulta, actualización y eliminación. Esto optimiza la gestión de 
+datos en empresas, instituciones educativas, bancos y aplicaciones digitales.
+
+Conceptos básicos
+Datos: Información básica como nombres, números o fechas.
+Entidad: Elemento del mundo real que se desea representar (por ejemplo: Cliente, Alumno, Producto).
+Atributos: Características de una entidad (nombre, edad, código, etc.).
+Registro: Conjunto de datos que describen una instancia de una entidad.
+Clave primaria (Primary Key): Identificador único que distingue cada registro dentro de una entidad.
+
+✔ En cada entidad se pueden identificar sus atributos y una clave primaria que permite diferenciar 
+cada registro de manera única.
+
+Ejemplo sencillo
+
+Entidad: Alumno
+
+Atributos: ID, Nombre, Edad
+Clave primaria: ID
+Cada alumno representa un registro dentro de la entidad.
+Tipos de Bases de Datos
+1. Base de datos relacional (SQL)
+Organiza la información en tablas compuestas por filas y columnas.
+Establece relaciones entre tablas mediante claves primarias y foráneas.
+Utiliza un modelo estructurado.
+
+Características:
+
+Estructura definida (esquema fijo).
+Alta integridad y consistencia de datos.
+Adecuada para sistemas organizados y transaccionales.
+
+Ejemplos de uso:
+
+Sistemas bancarios (clientes, cuentas, movimientos).
+Sistemas académicos (alumnos, cursos, notas).
+Sistemas de ventas (productos, clientes, pedidos).
+2. Base de datos No relacional (NoSQL)
+Maneja datos sin necesidad de tablas rígidas.
+Permite almacenar información en formatos flexibles.
+Está orientada a grandes volúmenes de datos y alta velocidad.
+
+Características:
+
+No requiere esquema fijo.
+Alta escalabilidad.
+Flexible para manejar datos variados o cambiantes.
+
+Ejemplos de uso:
+
+Redes sociales (usuarios, publicaciones, comentarios).
+Aplicaciones móviles y web modernas.
+Sistemas de Big Data y análisis en tiempo real.
+Diferencias clave
+Las bases de datos SQL son estructuradas y organizadas en tablas.
+Las bases de datos NoSQL son flexibles y adaptables a distintos tipos de datos.
+SQL prioriza la consistencia, mientras que NoSQL prioriza la velocidad y escalabilidad.
+Conclusión
+
+Las bases de datos son esenciales para organizar y gestionar información de manera eficiente.
+La elección entre una base de datos relacional o No relacional depende del tipo de sistema,
+la cantidad de datos y la necesidad de estructura o flexibilidad.
