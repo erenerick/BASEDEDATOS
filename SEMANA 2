@@ -1,0 +1,49 @@
+SEMANA 2: MAL USO DE CLAVES PRIMARIAS (PK) Y CLAVES FORÁNEAS (FK)
+Clave Primaria (PK)
+La clave primaria es un atributo o conjunto de atributos que identifica de 
+manera única cada registro dentro de una entidad o tabla.
+
+Características:
+No puede repetirse (única).
+No puede ser nula.
+Permite identificar cada registro de forma precisa.
+
+Utilidad:
+Garantiza que cada registro sea único, evitando duplicados y asegurando la integridad de los datos dentro de la tabla.
+Clave Foránea (FK)
+La clave foránea es un atributo que establece una relación entre dos tablas, conectando una tabla con la clave primaria de otra.
+Utilidad:
+Permite vincular información entre diferentes entidades, manteniendo coherencia en los datos.
+
+Ejemplo conceptual:
+Una tabla “Alumna” puede tener una FK que haga referencia a la tabla “Maestra”.
+Esto permite saber qué maestra está asociada a cada alumna.
+Integridad Referencial
+
+La integridad referencial es una regla que asegura la consistencia entre tablas relacionadas.
+Importancia:
+Evita registros “huérfanos” (datos sin relación válida).
+Impide inconsistencias entre tablas.
+Reduce la redundancia de información.
+Garantiza que una clave foránea siempre apunte a un registro existente en otra tabla.
+
+Mal uso de PK y FK
+El uso incorrecto de claves primarias y foráneas puede generar problemas graves en la base de datos:
+
+Errores comunes:
+Definir una PK que se repite → genera duplicidad de registros.
+No definir PK → dificulta la identificación de registros.
+Usar datos no estables como PK (por ejemplo, nombres).
+No establecer FK → pérdida de relaciones entre tablas.
+Eliminar registros sin considerar las FK → genera inconsistencias.
+Ejemplo de problema
+Si se elimina una “Maestra” sin controlar la FK, las “Alumnas” quedarían sin referencia válida.
+Esto rompe la integridad de la base de datos.
+Diferencia clave
+Clave primaria (PK): Identifica de forma única un registro dentro de su propia tabla.
+Clave foránea (FK): Hace referencia a la PK de otra tabla para crear relaciones.
+Conclusión
+
+El correcto uso de claves primarias y foráneas es fundamental para mantener la integridad, consistencia 
+y organización de una base de datos. Una mala implementación puede provocar errores, pérdida de información 
+y dificultades en el manejo de los datos.
