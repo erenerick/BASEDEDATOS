@@ -1,0 +1,47 @@
+SEMANA 3: INNER JOIN y LEFT JOIN
+Concepto general
+En bases de datos relacionales, es común trabajar con múltiples tablas. Para combinar información 
+de estas tablas se utilizan los JOIN, que permiten relacionar datos mediante claves.
+Tipos de JOIN
+INNER JOIN
+Devuelve únicamente los registros que tienen coincidencia en ambas tablas.
+Si no existe relación entre los datos, no se muestran en el resultado.
+Ejemplo conceptual:
+Si se relaciona “Alumnos” con “Cursos”, solo se mostrarán los alumnos que estén inscritos en algún curso.
+LEFT JOIN
+Devuelve todos los registros de la tabla izquierda, incluso si no tienen coincidencia en la tabla derecha.
+Cuando no hay relación, los datos de la tabla derecha aparecen vacíos.
+Ejemplo conceptual:
+Se mostrarán todos los alumnos, incluso aquellos que no estén inscritos en ningún curso.
+
+Sentencias básicas en consultas
+SELECT
+Se utiliza para seleccionar los datos que se desean mostrar.
+El símbolo (*) representa todas las columnas de una tabla.
+FROM
+Indica la tabla de donde se obtendrán los datos.
+WHERE
+Permite filtrar los resultados según una condición específica.
+Solo devuelve los registros que cumplen dicha condición.
+ORDER BY
+Ordena los resultados según uno o más campos.
+Puede ser de forma ascendente o descendente.
+Funciones de agregación
+COUNT()
+Cuenta la cantidad de registros o valores en un grupo.
+Útil para saber cuántos elementos existen en una categoría.
+AVG()
+Calcula el promedio de un conjunto de valores.
+Se usa para obtener medias, por ejemplo, promedios de notas o precios.
+Importancia del uso de JOIN y consultas
+Permiten integrar información de diferentes tablas.
+Facilitan el análisis de datos complejos.
+Ayudan a obtener reportes más completos y organizados.
+Diferencia clave entre INNER JOIN y LEFT JOIN
+INNER JOIN: Solo muestra datos que coinciden en ambas tablas.
+LEFT JOIN: Muestra todos los datos de la tabla principal, tengan o no coincidencia.
+Conclusión
+
+El uso de JOIN junto con sentencias como SELECT, WHERE y ORDER BY permite realizar consultas 
+eficientes y obtener información relevante. Además, las funciones como COUNT() y AVG() ayudan 
+a analizar los datos y generar resultados resumidos útiles para la toma de decisiones.
