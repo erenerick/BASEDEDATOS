@@ -1,0 +1,103 @@
+SEMANA6: SUBCONSULTAS
+Las subconsultas (subqueries) son consultas SQL anidadas dentro de otra consulta principal. Se utilizan para obtener datos intermedios que luego serán usados por la consulta externa.
+Tipos de subconsultas
+Escalar: devuelve un solo valor.
+De fila: devuelve una fila.
+De tabla: devuelve múltiples filas/columnas.
+Correlacionadas: dependen de la consulta externa y se ejecutan por cada fila.
+Dónde se usan
+En SELECT
+En WHERE
+En FROM
+En HAVING
+Operadores comunes con subconsultas
+IN
+EXISTS
+ANY
+ALL
+
+CONOCIMIENTOS PREVIOS
+¿Qué es una subconsulta y cómo se diferencia de una consulta principal en SQL?
+
+Una subconsulta es una consulta dentro de otra consulta.
+La consulta principal (externa) ela que recibe el resultado final.
+
+Diferencia clave:
+
+Consulta principal → controla el resultado final.
+Subconsulta → proporciona datos auxiliares para filtrar o calcular.
+
+Ejemplo:
+
+SELECT nombre
+FROM clientes
+WHERE id IN (SELECT id_cliente FROM pedidos);
+
+La subconsulta obtiene los clientes que tienen pedidos.
+
+¿Cuál es la diferencia entre INNER JOIN y LEFT JOIN?
+INNER JOIN	LEFT JOIN
+Solo muestra coincidencias entre ambas tablas	Muestra todos los registros de la tabla izquierda
+Excluye datos sin relación	Incluye datos sin relación (con NULL)
+
+Ejemplo:
+
+-- INNER JOIN
+SELECT *
+FROM clientes c
+INNER JOIN pedidos p ON c.id = p.id_cliente;
+
+-- LEFT JOIN
+SELECT *
+FROM clientes c
+LEFT JOIN pedidos p ON c.id = p.id_cliente;
+¿Qué hace el operador UNION y cómo se diferencia de UNION ALL?
+UNION	UNION ALL
+Elimina duplicados	NO elimina duplicados
+Más lento	Más rápido
+Resultados únicos	Resultados completos
+
+Ejemplo:
+
+SELECT nombre FROM clientes
+UNION
+SELECT nombre FROM proveedores;
+
+UTILIDAD
+¿Cómo pueden las subconsultas ayudarte a realizar búsquedas más específicas?
+
+Permiten:
+
+Filtrar datos con condiciones complejas
+Comparar valores con resultados de otra consulta
+Evitar múltiples consultas separadas
+Ejemplo:
+SELECT nombre
+FROM empleados
+WHERE salario > (SELECT AVG(salario) FROM empleados);
+Aquí se buscan empleados con salario mayor al promedio.
+
+¿En qué situaciones sería más conveniente usar un LEFT JOIN en lugar de un INNER JOIN?
+
+Cuando necesitas:
+Ver todos los registros de una tabla, aunque no tengan relación
+Detectar datos faltantes (valores NULL)
+Hacer auditorías o reportes completos
+
+Ejemplo real:
+Mostrar todos los clientes, incluso los que no compraron.
+¿Por qué podrías optar por usar UNION ALL en lugar de UNION al combinar resultados de consultas?
+
+Porque:
+Es más rápido (no elimina duplicados)
+Mantiene todos los datos originales
+Es útil cuando los duplicados sí son importantes
+
+Ejemplo:
+Cuando se combinan ventas de diferentes meses y no quieres perder registros repetidos.
+IDEA CLAVE
+Subconsulta = consulta dentro de otra
+INNER JOIN = solo coincidencias
+LEFT JOIN = todo + coincidencias
+UNION = elimina duplicados
+UNION ALL = mantiene duplicados
